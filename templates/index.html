@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Smart Lender</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<h1>🤖 Smart Lender</h1>
+
+<p>
+AI Based Loan Approval Prediction System
+</p>
+
+
+<form action="/predict" method="POST">
+
+
+<div class="grid">
+
+
+<div>
+<label>Gender</label>
+<select name="Gender">
+<option>Male</option>
+<option>Female</option>
+</select>
+</div>
+
+
+<div>
+<label>Married</label>
+<select name="Married">
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+
+
+<div>
+<label>Dependents</label>
+<select name="Dependents">
+<option>0</option>
+<option>1</option>
+<option>2</option>
+<option>3+</option>
+</select>
+</div>
+
+
+
+<div>
+<label>Education</label>
+<select name="Education">
+<option>Graduate</option>
+<option>Not Graduate</option>
+</select>
+</div>
+
+
+
+<div>
+<label>Self Employed</label>
+<select name="Self_Employed">
+<option>Yes</option>
+<option>No</option>
+</select>
+</div>
+
+
+
+<div>
+<label>Applicant Income</label>
+<input type="number" name="ApplicantIncome" required>
+</div>
+
+
+
+<div>
+<label>Co Applicant Income</label>
+<input type="number" name="CoapplicantIncome" required>
+</div>
+
+
+
+<div>
+<label>Loan Amount</label>
+<input type="number" name="LoanAmount" required>
+</div>
+
+
+
+<div>
+<label>Loan Term</label>
+<input type="number" name="Loan_Amount_Term" required>
+</div>
+
+
+
+<div>
+<label>Credit History</label>
+
+<select name="Credit_History">
+
+<option value="1">Good</option>
+
+<option value="0">Bad</option>
+
+</select>
+
+</div>
+
+
+
+<div>
+
+<label>Property Area</label>
+
+<select name="Property_Area">
+
+<option>Urban</option>
+<option>Rural</option>
+<option>Semiurban</option>
+
+</select>
+
+</div>
+
+
+</div>
+
+
+<button onclick="loading()">
+
+Predict Loan
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+</body>
+</html>
